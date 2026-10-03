@@ -1,0 +1,121 @@
+{
+  "id": "orange-cat",
+  "name": "Orange Tabby Cat",
+  "states": {
+    "idle": {
+      "frames": ["../../assets/Idle 1.png"],
+      "loop": true
+    },
+    "blink": {
+      "frames": ["../../assets/Idle 1.png", "../../assets/Idle 2.png"],
+      "loop": false,
+      "nextState": "idle",
+      "closeMs": 85,
+      "holdMs": 90,
+      "openMs": 115
+    },
+    "happy": {
+      "frames": ["../../assets/Happy 1.png", "../../assets/Happy 2.png"],
+      "loop": false,
+      "nextState": "idle",
+      "durationMs": 3000,
+      "cycleMs": 620,
+      "cooldownMs": 4200
+    },
+    "wave": {
+      "frames": ["../../assets/Wavw 1.png", "../../assets/Wave 2.png"],
+      "loop": false,
+      "nextState": "idle",
+      "durationMs": 1400,
+      "cycleMs": 520,
+      "startAfterMs": 1600,
+      "intervalMs": [18000, 26000]
+    },
+    "read": {
+      "frames": ["../../assets/Read 1.png", "../../assets/Read 2.png"],
+      "loop": false,
+      "nextState": "idle",
+      "durationMs": 6000,
+      "cycleMs": 1500
+    },
+    "headphones": {
+      "frames": ["../../assets/Headphone 1.png", "../../assets/Headphone 1.5.png", "../../assets/Headphone 2.png", "../../assets/Headphone 1.5.png"],
+      "loop": false,
+      "nextState": "idle",
+      "durationMs": 6000,
+      "cycleMs": 1200
+    },
+    "sleep": {
+      "frames": ["../../assets/Sleep 1.png", "../../assets/Sleep 1.5.png", "../../assets/Sleep 2.png", "../../assets/Sleep 1.5.png"],
+      "loop": true
+    },
+    "dragged": {
+      "frames": ["../../assets/Idle 1.png"],
+      "loop": true
+    },
+    "ballDragging": {
+      "frames": ["../../assets/Idle 1.png"],
+      "loop": true
+    },
+    "chaseBall": {
+      "frames": ["../../assets/Walk 1.png", "../../assets/Walk 1.5.png", "../../assets/Walk 2.png", "../../assets/Walk 2.5.png", "../../assets/Walk 3.png", "../../assets/Walk 3.5.png", "../../assets/Walk 4.png"],
+      "loop": true
+    },
+    "returnBall": {
+      "frames": ["../../assets/Idle 1.png"],
+      "loop": true
+    },
+    "yarnPlay": {
+      "frames": ["../../assets/Play Left Cat.png", "../../assets/Play Right Cat.png"],
+      "pawContactsPx": [{ "x": 107, "y": 386 }, { "x": 223, "y": 398 }],
+      "loop": true,
+      "nextState": "idle"
+    },
+    "yarnJump": {
+      "frames": ["../../assets/Jump Left Cat.png", "../../assets/Jump Center Cat.png", "../../assets/Jump Right Cat.png"],
+      "anchorsPx": [
+        { "bodyX": 170, "footY": 460 },
+        { "bodyX": 220, "footY": 453 },
+        { "bodyX": 155, "footY": 465 }
+      ],
+      "loop": false,
+      "nextState": "yarnPlay"
+    },
+    "walk": {
+      "frames": [
+        "../../assets/Walk 1.png",
+        "../../assets/Walk 1.5.png",
+        "../../assets/Walk 2.png",
+        "../../assets/Walk 2.5.png",
+        "../../assets/Walk 3.png",
+        "../../assets/Walk 3.5.png",
+        "../../assets/Walk 4.png"
+      ],
+      "loop": true,
+      "speedPxPerSecond": 120,
+      "accelerationPxPerSecond2": 500,
+      "decelerationPxPerSecond2": 650,
+      "strideLengthPx": 46,
+      "positionSmoothingMs": 38,
+      "startAfterMs": 3500,
+      "restMs": [5000, 9000],
+      "turnPauseMs": 260,
+      "traversalsPerWalk": 2
+    }
+  },
+  "ambient": {
+    "blinkIntervalMs": [3500, 7500],
+    "doubleBlinkChance": 0.12,
+    "doubleBlinkGapMs": 180
+  },
+  "play": {
+    "ballImage": "../../assets/Yarn Ball.png",
+    "ballCenterPx": { "x": 430, "y": 180 },
+    "referencePetSizePx": 240
+  },
+  "effects": {
+    "happy": { "kind": "heart", "text": "♥", "durationMs": 1500 },
+    "wave": { "kind": "bubble", "text": "Hi!", "durationMs": 1200 },
+    "sleep": { "kind": "bubble", "text": "Zzz...", "durationMs": 1800 }
+  }
+}
